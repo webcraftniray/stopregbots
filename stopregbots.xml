@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="user">
+        <name>Stop Reg Bots</name>
+        <author>Ray Lawlor</author>
+        <creationDate>July 2013</creationDate>
+        <copyright>Copyright (C) 2013 Ray Lawlor @ zoomodsplus.com. All rights reserved.
+        </copyright>
+        <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+        <authorEmail>ray@zoomodsplus.com</authorEmail>
+        <authorUrl>http://www.zoomodsplus.com</authorUrl>
+        <version>1.0.0</version>
+        <description>PLG_STOPREGBOTS_XML_DESCRIPTION</description>
+        <files>
+                <filename plugin="stopregbots">stopregbots.php</filename>
+                <filename plugin="stopregbots">stopregbots.xml</filename>
+                <filename>index.html</filename>
+                <folder>language</folder>
+        </files>
+        <languages>
+                <language tag="en-GB">language/en-GB/en-GB.plg_user_stopregbots.ini</language>
+                <language tag="en-GB">language/en-GB/en-GB.plg_user_stopregbots.sys.ini</language>
+        </languages>
+        <config>
+                <fields name="params">
+ 
+                        <fieldset name="basic">
+                            <field name="name" type="text"                                      
+                                        description="PLG_USER_STOPREGBOTS_NAME_DESC"                              
+                                        label="PLG_USER_STOPREGBOTS_NAME_LABEL"                                    
+                                />
+                            <field name="email" type="text"                                      
+                                        description="PLG_USER_STOPREGBOTS_EMAIL_DESC"                               
+                                        label="PLG_USER_STOPREGBOTS_EMAIL_LABEL"                                    
+                                />
+                            <field name="username" type="text"                                      
+                                        description="PLG_USER_STOPREGBOTS_USERNAME_DESC"                             
+                                        label="PLG_USER_STOPREGBOTS_USERNAME_LABEL"                                    
+                                />
+                        </fieldset>
+                </fields>
+        </config>
+</extension>
