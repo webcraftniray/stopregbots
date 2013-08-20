@@ -36,6 +36,21 @@
                                         description="PLG_USER_STOPREGBOTS_USERNAME_DESC"                             
                                         label="PLG_USER_STOPREGBOTS_USERNAME_LABEL"                                    
                                 />
+                            <field name="message" type="textarea"                                      
+                                        description="PLG_USER_STOPREGBOTS_MESSAGE_DESC"                             
+                                        label="PLG_USER_STOPREGBOTS_MESSAGE_LABEL"                                    
+                                />
+                            <field name="attempts" type="list"                                      
+                                        description="PLG_USER_STOPREGBOTS_ATTEMPTS_DESC"                             
+                                        label="PLG_USER_STOPREGBOTS_ATTEMPTS_LABEL"                                    
+                                >
+                                <option value="0">Disable</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </field>
                         </fieldset>
                 </fields>
         </config>
