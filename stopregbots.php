@@ -50,8 +50,8 @@ class PlgUserStopregbots extends JPlugin {
      * @throws    InvalidArgumentException on invalid date.
      */
     public function onUserBeforeSave($user, $isnew, $data) {
-        
-        
+
+
         // Set RESULT as 'ture' and allow the code below to set it to 'false' if needs be.
         $result = TRUE;
 
@@ -59,11 +59,13 @@ class PlgUserStopregbots extends JPlugin {
         $names = explode(",", $this->params->get('name'));
         $emails = explode(",", $this->params->get('email'));
         $usernames = explode(",", $this->params->get('username'));
+        $numDots = substr_count($data['email'], '.');
+        
+        if ($this->params->get('dots') > 0) { $getDots = $this->params->get('dots');}
 
-        //now check if the value being registraed against the params list
         if (in_array($data['name'], $names) ||
                 in_array($data['email'], $emails) ||
-                in_array($data['username'], $usernames)) {
+                in_array($data['username'], $usernames) || $numDots > $getDots) {
             JError::raiseWarning(1000, JText::_($this->params->get('message')));
             $result = FALSE;
         }
@@ -78,8 +80,8 @@ class PlgUserStopregbots extends JPlugin {
         //set vars
         $name = $data['name'];
         $paramRows = $this->params->get('attempts');
-        
-        
+
+
         //check if theis params is set to '0'
         if ($paramRows > 0) {
 

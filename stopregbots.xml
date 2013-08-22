@@ -51,6 +51,16 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </field>
+                            <field name="dots" type="list"                                      
+                                        description="PLG_USER_STOPREGBOTS_DOTS_DESC"                             
+                                        label="PLG_USER_STOPREGBOTS_DOTS_LABEL"                                    
+                                >
+                                <option value="0">Disable</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </field>
                         </fieldset>
                 </fields>
         </config>
