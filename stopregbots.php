@@ -58,8 +58,15 @@ class PlgUserStopregbots extends JPlugin {
         //take the params and seperate using the comma and set the values into the array vars
         $names = explode(",", $this->params->get('name'));
         $emails = explode(",", $this->params->get('email'));
+        $emailDomain = explode(",", $this->params->get('emailDomain'));
         $usernames = explode(",", $this->params->get('username'));
         $numDots = substr_count($data['email'], '.');
+        $domain = $this->getDomainFromEmail($data['email']);
+        
+        if (in_array($domain, $emailDomain)){
+             JError::raiseWarning(1000, JText::_($this->params->get('message')));
+            $result = FALSE;
+        }
         
         if ($this->params->get('dots') > 0) { $getDots = $this->params->get('dots');}
 
@@ -103,5 +110,12 @@ class PlgUserStopregbots extends JPlugin {
 
         return $result;
     }
+    
+    
+private function getDomainFromEmail($email)
+{
+$domain = substr(strrchr($email, "@"), 1);
+return $domain;
+}
 
 }
