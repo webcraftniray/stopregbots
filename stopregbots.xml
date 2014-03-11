@@ -32,6 +32,10 @@
                                         description="PLG_USER_STOPREGBOTS_EMAIL_DESC"                               
                                         label="PLG_USER_STOPREGBOTS_EMAIL_LABEL"                                    
                                 />
+                            <field name="emailDomain" type="text"                                      
+                                        description="PLG_USER_STOPREGBOTS_EMAIL_DOMAIN_DESC"                               
+                                        label="PLG_USER_STOPREGBOTS_EMAIL_DOMAIN_LABEL"                                    
+                                />
                             <field name="username" type="text"                                      
                                         description="PLG_USER_STOPREGBOTS_USERNAME_DESC"                             
                                         label="PLG_USER_STOPREGBOTS_USERNAME_LABEL"                                    
